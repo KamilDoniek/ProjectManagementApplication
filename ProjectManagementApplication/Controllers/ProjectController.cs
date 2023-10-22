@@ -12,8 +12,8 @@ namespace ProjectManagementApplication.Controllers
     {
         private static IList<Project> _projects = new List<Project>
         {
-            new Project(){Id = 1,Name = "Aplikacja zarządzania Sklepem",Description = "projekt polega na napisaniu aplikacji internetowej która bedzie zarządzac sklepem ", Deadline = "20.12.2023"},
-            new Project(){Id = 2,Name = "Aplikacja zarządająca projektami ",Description = "projekt polega na napisaniu aplikacji internetowej która bedzie zarządzac projektami " ,Deadline = "22.11.2023"}
+            new Project(){Id = 1,Name = "Aplikacja zarządzania Sklepem",Description = "projekt polega na napisaniu aplikacji internetowej która bedzie zarządzac sklepem ",Members = "Agnieszka, Witold",Deadline = "20.12.2023"},
+            new Project(){Id = 2,Name = "Aplikacja zarządająca projektami ",Description = "projekt polega na napisaniu aplikacji internetowej która bedzie zarządzac projektami ",Members = "Alex, Magda, Monika",Deadline = "22.11.2023"}
 
         };
         // GET: Project
@@ -60,6 +60,7 @@ namespace ProjectManagementApplication.Controllers
 
             projectToEdit.Name = project.Name;
             projectToEdit.Description = project.Description;
+            projectToEdit.Members = project.Members;
             projectToEdit.Deadline = project.Deadline;
 
             
